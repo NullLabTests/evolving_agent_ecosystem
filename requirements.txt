@@ -1,4 +1,1 @@
-numpy
-networkx
-dataclasses-json
-tqdm
+# No external dependencies required — pure Python standard library
