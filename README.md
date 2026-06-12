@@ -69,18 +69,17 @@ The result: **boom-bust population cycles**, **strategy divergence**, and **emer
 
 ---
 
-##  Requirements
-
-- Python **3.8+**
-- `numpy`, `networkx`, `dataclasses-json`, `tqdm` _(optional — see `requirements.txt`)_
-
-Install:
+##  Quick Start
 
 ```bash
+git clone https://github.com/NullLabTests/evolving_agent_ecosystem.git
+cd evolving_agent_ecosystem
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python main.py
 ```
+
+No dependencies required — pure Python standard library only.
 
 ---
 
@@ -94,21 +93,24 @@ python main.py
 **Sample output:**
 
 ```
+==========================================================
+  EVOLVING AGENT ECOSYSTEM
+  Open-ended evolutionary simulation
+==========================================================
 [tick  10] pop= 9 explore_var=0.0038 msg_ent=0.860 mean_en=0.590 deaths=0
 [tick  20] pop= 3 explore_var=0.0010 msg_ent=1.000 mean_en=0.827 deaths=2
 [tick  30] pop= 2 explore_var=0.0466 msg_ent=1.000 mean_en=0.462 deaths=2
 [tick  40] pop= 5 explore_var=0.0100 msg_ent=0.590 mean_en=0.789 deaths=4
 [tick  50] pop= 9 explore_var=0.0276 msg_ent=0.456 mean_en=0.708 deaths=4
-[tick  60] pop= 3 explore_var=0.0126 msg_ent=1.000 mean_en=0.760 deaths=4
-[tick  70] pop= 3 explore_var=0.0035 msg_ent=1.000 mean_en=0.539 deaths=5
-[tick  80] pop= 4 explore_var=0.0155 msg_ent=0.750 mean_en=0.964 deaths=5
-[tick  90] pop= 8 explore_var=0.0356 msg_ent=0.719 mean_en=0.740 deaths=7
-[tick 100] pop= 4 explore_var=0.0581 msg_ent=0.750 mean_en=0.688 deaths=7
 
-[POPULATION] trajectory: [8,5,6,6,8,8,9,10,9,9,10,10,9,10,7,...]
-[MSG ENTROPY] trajectory: [0.802,0.828,0.693,0.871,0.516,...]
-[FINAL] agents=4 total_deaths=7
-[GENOMES] explore=[0.79,0.86,0.37,0.47] cooperate=[0.74,0.76,0.99,1.0] risk=[1.0,1.0,0.99,0.89]
+[POPULATION] boom-bust across 100 ticks: 8→2→15→3 (range 2–15)
+[MSG ENTROPY] diverse signaling: 0.0–1.0, never static
+[FINAL GENOMES] explore=[0.79,0.86,0.37,0.47]
+                 cooperate=[0.74,0.76,0.99,1.0]
+                 risk=[1.0,1.0,0.99,0.89]
+==========================================================
+  Simulation complete.
+==========================================================
 ```
 
 ---
