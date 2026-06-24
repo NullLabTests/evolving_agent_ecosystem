@@ -1,8 +1,25 @@
-.venv/
+# Byte-compiled
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+
+# Env
 .env
-logs/*
-data/*
-!logs/.gitkeep
-!data/.gitkeep
+.venv
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+*.egg-info/
