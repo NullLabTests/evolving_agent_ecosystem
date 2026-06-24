@@ -7,13 +7,11 @@ __pycache__/
 .env
 .venv
 venv/
-ENV/
 
 # IDE
 .vscode/
 .idea/
 *.swp
-*.swo
 
 # OS
 .DS_Store
